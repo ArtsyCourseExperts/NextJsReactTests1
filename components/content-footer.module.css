@@ -1,0 +1,128 @@
+/* CSS Module for content footer 
+
+https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css
+To use 
+import styles from './Button.module.css'
+Note how the "error" class is accessed as a property on the imported `styles` object.
+className={styles.error}
+*/
+
+.content_footer {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #9751c2;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 20%;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.copyright_text {
+  font-size: 14px;
+  color: #733699;
+  margin: 0;
+}
+
+.copyright_area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.copyright_brand_link {
+  font-size: 14px;
+  color: purple;
+}
+.top_left_section {
+  font-size: 16px;
+  width: 40%;
+}
+.footer_links_nav {
+  display: flex;
+  padding: 0;
+  gap: 3rem;
+  justify-content: flex-start;
+}
+.links {
+  color: #faed38;
+  font-size: 14px;
+  text-decoration: none;
+}
+.top_row {
+  display: flex;
+}
+.footer_menu {
+  width: 20%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.menu_title {
+  color: #82ca50;
+  font-weight: bold;
+  text-decoration: none;
+  font-variant-caps: petite-caps;
+}
+.menu_options {
+  color: #faed38;
+  text-decoration: none;
+}
+.legal_links_area {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+  right: 0;
+}
+
+.legal_link {
+  font-size: 14px;
+  padding-left: 25px;
+  color: blue;
+}
+
+a.legal_link {
+  font-size: 14px;
+  color: #9497f0;
+  text-decoration: none;
+}
+
+/*
+    .legal_link
+    , a.legal_link.link
+    , a.legal_link.visited
+    , a.legal_link.hover
+        {
+        font-size:25px;
+        color: blue;
+        text-decoration:underline;
+        }
+
+*/
+
+.ad_row_area {
+  background-color: #bbbbbb;
+  padding: 10px;
+  text-align: center;
+  height: 100px;
+  vertical-align: middle;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.ad_row_ad {
+  vertical-align: middle;
+}
+
+.info_row {
+  background-color: #999999;
+  padding: 10px;
+  text-align: center;
+}

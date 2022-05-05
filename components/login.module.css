@@ -1,0 +1,109 @@
+/* CSS Module for LOGIN
+
+https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css
+To use 
+Note how the "error" class is accessed as a property on the imported `styles` object.
+className={styles.error}
+*/
+
+.container {
+  min-height: 100vh;
+  background-clip: initial;
+  background-color: #fff;
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+  margin: 0 auto;
+  /* align-items: center; */
+  justify-content: center;
+  /* border-radius: 2rem; */
+  gap: 2rem;
+  padding: 3rem;
+}
+.title {
+  margin: 0;
+}
+.title > h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  user-select: none;
+  color: #000;
+  /* line-height: 0.3rem; */
+}
+.title > p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #000;
+  user-select: none;
+  /* line-height: 0.3rem; */
+}
+.form {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  flex-direction: column;
+}
+.input {
+  background-color: transparent;
+  box-sizing: border-box;
+  box-shadow: none;
+  width: 100%;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.4rem;
+  align-items: center;
+  border: 1px solid #000;
+  padding-left: 0.5rem;
+  border-radius: 0.3rem;
+}
+.inputContainer img {
+  width: 1.5rem;
+}
+.inputContainer > a {
+  text-decoration: none;
+  color: orange;
+  text-align: right;
+  width: max-content;
+  /* background-color: #000; */
+  font-weight: 500;
+}
+.inputContainer > input {
+  border-radius: 0.3rem;
+}
+
+.inputContainer > input:-webkit-autofill,
+.inputContainer > input:-webkit-autofill:hover,
+.inputContainer > input:focus,
+.inputContainer > input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.submitButton {
+  width: 100%;
+  background-color: orange;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 20px;
+  padding: 0.6rem;
+}
+.register {
+  color: #000;
+  font-weight: 400;
+  user-select: none;
+}
+.register > a {
+  font-weight: 600;
+  text-decoration: none;
+  color: orange;
+}

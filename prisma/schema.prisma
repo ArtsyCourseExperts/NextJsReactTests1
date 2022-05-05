@@ -1,0 +1,488 @@
+//Comments
+//https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#model-field-scalar-types
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+//Using database ace_saas
+//May connect to local dev db or AWS db
+datasource db {
+  provider = "mysql"
+  url      = env("MYSQL_URL")
+}
+
+
+//model names should use singular form User instead of Users
+//? means field can be null on DB
+model AceUser {
+    //database key, not public.
+    id                      Int             @id @default(autoincrement())
+    
+    userCreatedAt           DateTime        @default(now())
+    
+    //Unique User ID stored in cookies, JWT, etc.
+    uniqueUserGuid          String?         @db.VarChar(255) @unique 
+    
+    //Current session ID, I may recreate it upon logout/login.
+    //sessionId               String?             @db.VarChar(255)
+    
+    //Current email
+    email                   String?         @unique
+    emailVerified           Int?
+    emailVerifiedWhen       DateTime?
+    emailVerifySkip         Int?
+    emailVerifyCode         String? 
+    emailBackup             String?         @db.VarChar(255)
+    emailUpdatedAt          DateTime?
+    emailChangeCount        Int?
+
+    //Prior email
+    emailOld                String?
+    emailOldVerified        DateTime?
+    emailOldUpdatedAt       DateTime?
+    
+    //Temp using plain password
+    passwordPlain           String?         @db.VarChar(255)
+    //Hashed version of password
+    passwordHashed          String?         @db.VarChar(255)
+    passwordEncrypted       String?         @db.VarChar(255)
+    passwordTechnique       String?
+    passwordFailureCount    Int?
+    passwordFailureLastDate DateTime?
+    
+    deletedStatus           Int?            //If user has asked to be deleted for PII or other reason.
+    //If banned for some reason
+    bannedStatus            Int?
+    bannedReason            String?
+
+    profile                 AceUserProfile?
+    settings                AceUserSettings? 
+    
+    alerts                  AceUserAlert[]
+
+    //More than one user (on a team) can link to content
+    content                 AceContentLibrary?
+    
+    paymentInfo             AcePaymentInfo?
+    //Prior payments
+    payments                AcePayment[]
+    //plan                    String?             @db.VarChar(255)
+    plan                    AceUserPlan?
+
+    stats                   AceUserStats?   
+
+    notes                   String?         
+}
+
+
+//Stats
+model AceUserStats {
+    id                          Int                 @id @default(autoincrement())
+    userId                      Int
+    user                        AceUser             @relation(fields: [userId], references: [id])
+
+    badServerProtocolCount      Int?
+    badPageRequestCount         Int?
+    badApiDataCount             Int?
+    badCookieCount              Int?
+    badUserInputCount           Int?
+    badLastDateTime             DateTime?
+
+    loginCount                  Int?
+    //Last actual login, not using cookies.  Using Real username and password.
+    loginLastDateTime           DateTime?     
+    loggedIn                    Int?
+
+    //SessionIdDateTime         DateTime?
+    sessionLastDateTime         DateTime?           @default(now())
+    
+    lastIp                      String?
+    lastIpCountry               String?
+    lastBrowserTags             String?             @db.VarChar(1024)
+    lastBrowserCountry          String?
+    
+    logoutCount                 Int?
+    logoutLastDateTime          DateTime?     
+
+    homeCount                   Int?
+    toolUse                     Int?
+    
+    notes                       String?             @db.VarChar(512)
+}
+
+
+//Name, Address, Phone, Avatar, etc.
+model AceUserProfile {
+    id                  Int                 @id @default(autoincrement())
+    user                AceUser             @relation(fields: [userId], references: [id])
+    userId              Int
+
+    //One generic field for full name or fname or name l.
+    //May be used to distinguish account or for mail.
+    name                String?             @db.VarChar(255)
+    
+    phoneMobile         String?             @db.VarChar(128)
+    
+    address             String?             @db.VarChar(255)
+    city                String?             @db.VarChar(255)
+    state               String?             @db.VarChar(255)
+    country             String?             @db.VarChar(255)
+    zip                 String?             @db.VarChar(255)
+    
+    //PNG
+    //avatar                  
+}
+
+
+//App Settings
+model AceUserSettings {
+    id                  Int                 @id @default(autoincrement())
+    user                AceUser             @relation(fields: [userId], references: [id])
+    userId              Int
+
+    //Add to email tips
+    getEmailTips        Int?            
+
+    //Fav colors
+    //2FA ?
+
+}
+
+
+//All teaching content is in here.
+//Support multiple users in future.   Like multiple users in Asana
+model AceContentLibrary {
+    id                  Int                   @id @default(autoincrement())
+    user                AceUser               @relation(fields: [userId], references: [id])
+    userId              Int
+    
+
+    //What is this?
+    name                String?
+    
+    website             String?
+
+    //Fav internal tools
+
+    //Your Skills, your gaps
+    
+    courses             AceCourse[]
+    //industries        String[]
+
+    //Links to external tools.
+
+    AceTeachingService  AceTeachingService[]
+}
+
+
+//How are client functioning - website, course
+model AceTeachingService {
+    id                  Int                 @id @default(autoincrement())
+    contentLibrary      AceContentLibrary   @relation(fields: [contentLibraryId], references: [id])
+    contentLibraryId    Int
+    
+    name                String?
+    url                 String?
+    checktype           String?
+
+    updatedAt           DateTime            @default(now())
+    
+    isAvailable         Int?
+    //Good
+    statusText          String?          
+    
+    //Problems with Mail Server 123ABC
+    statusDebugInfo     String?          
+    statusCode          Int?
+    
+    //Which service did the check and update.
+    updatedBy           String?     
+    }
+
+
+model AceCourse {
+    id                  Int                 @id @default(autoincrement())
+    contentLibrary      AceContentLibrary   @relation(fields: [contentLibraryId], references: [id])
+    contentLibraryId    Int
+    
+
+    name                String              @db.VarChar(255)
+    notes               String?
+    teacherBio          String?             @db.VarChar(1024)
+    landingPage         String?
+    title               String?             @db.VarChar(512)
+    price               Decimal?
+    courseSalesPage     String?    
+    courseStatus        AceCourseStatus?
+}
+
+
+//Status of courses 
+enum AceCourseStatus {
+    Idea
+    Draft
+    Beta
+    Sales
+    Live
+    }
+
+
+//For each payment or failed payment.
+model AcePayment {
+    id                  Int                 @id @default(autoincrement())
+    user                AceUser             @relation(fields: [userId], references: [id])
+    userId              Int
+
+    paymentDate         DateTime?                               
+    billDate            DateTime?
+    amount              Decimal?
+    invoiceText         String?
+    transactionDetails  String?             @db.VarChar(1024)
+    successCode         Int?
+    //CC*1234
+    methodText          String?
+    }
+
+
+//Current payment info.
+model AcePaymentInfo {
+    id                  Int                 @id @default(autoincrement())
+    user                AceUser             @relation(fields: [userId], references: [id])
+    userId              Int
+
+    //firstDate           DateTime?
+
+    coupons             String?             @db.VarChar(255)
+    paymentType         String?             @db.VarChar(255)
+    
+    //Temp plaintext number
+    numberPlain         String?             @db.VarChar(255)
+    numberEncrypted     String?             @db.VarChar(255)
+    
+    //Last 4 digits of card
+    numberEnd           String?             @db.VarChar(255)
+
+    expirationMonth     String?             @db.VarChar(255)
+    expirationYear      String?             @db.VarChar(255)
+    csv                 String?             @db.VarChar(255)
+    
+    zipBilling          String?
+
+    stripeId            String?
+
+}
+
+
+//Current plan - Free, Pro, other?
+model AceUserPlan {
+    id                  Int                 @id @default(autoincrement())
+    user                AceUser             @relation(fields: [userId], references: [id])
+    userId              Int
+
+    //Note that Free does not have a plan, so planName would be blank.
+    //Pro, Ultimate
+    planName            String?
+}
+
+
+//User alerts like, try this or fyi add email.
+model AceUserAlert {
+    id                  Int                 @id @default(autoincrement())
+    user                AceUser             @relation(fields: [userId], references: [id])
+    userId              Int
+    
+    alert               String?
+    note                String?
+    createdAt           DateTime            @default(now())
+}
+
+
+
+//How are OUR ACE services functioning - website, worker1, worker2 
+model AceServiceStatus {
+    id                  Int                 @id @default(autoincrement())
+    name                String?             @unique
+    
+    updatedAt           DateTime            @default(now())
+    
+    isAvailable         Int?
+    //Good
+    statusText          String?          
+    
+    //Problems with Mail Server 123ABC
+    statusDebugInfo     String?          
+    statusCode          Int?
+    
+    //Which service did the check and update.
+    updatedBy           String?     
+    }
+
+
+//Revoked sessions, while JWT token may still be valid.
+model AceSessionsRevokeList {
+    id              Int                     @id @default(autoincrement())
+    items           AceSessionRevokedItem[]
+    }
+
+
+//A revoked userid or cookie info.
+model AceSessionRevokedItem {
+    id              Int                     @id @default(autoincrement())
+    revokeList      AceSessionsRevokeList?  @relation(fields: [listId], references: [id])
+    listId          Int?
+
+    whenRevoked     DateTime?
+    uniqueUserId    String?                 @db.VarChar(255)
+
+    //User Blocked or LoggedOut 
+    whyRevoked      String?
+    }
+
+
+//Blocked IPs - rules and dynamic adds
+model AceBlockedIps {
+    id                          Int                     @id @default(autoincrement())
+    
+    //rule or automatic
+    blockType                   String?
+
+    //Type of address
+    //address 172.22.33.44
+    //or range 172.22.14.1-172.22.14.256
+    //or mask  172.22.*.*
+    blockIpType                 String?
+    blockIpAddress              String?                 @db.VarChar(1024)
+    
+    //Block browser agent tags 
+    //keyword, regex
+    blockBrowserType            String?
+    //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36
+    blockBrowserText            String?                 @db.VarChar(1024)
+    
+    //country, language
+    blockCountryType            String?
+    //en-US
+    blockCountryText            String?                 
+    
+    //Block data field entry
+    //keyword, regex
+    blockDataType               String?
+    blockDataText               String?                 @db.VarChar(1024)
+
+    //Attempt
+    attemptBrowserAgent         String?                 @db.VarChar(1024)
+    attemptWhenAdded            DateTime?               @default(now())
+    attemptWhenLast             DateTime?               
+    attemptCount                Int
+    //country, DOS, malicious, hacker, email
+    attemptViolationCode        String?
+    //Extra dynamic data about attempt.
+    attemptData                 String?                 @db.VarChar(1024)
+
+    //My notes like from Syria or tried admin account.
+    notes                       String?                 
+    }
+
+
+//=================
+//These are app tests used with this project
+
+// Misc test table. 
+model AceTest1 {
+    id                  Int         @id @default(autoincrement())
+    email               String      @unique
+    number1             Int
+    notes               String
+    }
+
+
+//Used to verify connection is valid, and get a few test rows. 
+//Notice @@map, so utilize this model AceTestConn as prisma["aceTestConn"] -> SQL tablename acetestconn
+model AceTestConn {
+    id                  Int         @id @default(autoincrement())
+    email               String      @unique
+    name                String
+    notes               String      @db.VarChar(255)
+    @@map("acetestconn")
+    }
+
+//=================
+// Test tables can be used with any project
+
+
+// Misc test table. 
+model TestCrud1 {
+    id                  Int         @id @default(autoincrement())
+    email               String      @unique
+    name                String
+    notes               String      @db.VarChar(255)
+    @@map("testcrud1")
+    }
+
+
+//Has all data types and helper functions like key, not null, optional, etc.
+model TestPrisma1 {
+    id              Int             @id @default(autoincrement())
+    nameUnique      String          @unique
+    createdAt       DateTime        @default(now())
+    updatedAt       DateTime        @updatedAt
+    //date1           Date
+    title           String          @db.VarChar(255)
+    content         String?
+    published       Boolean         @default(false)
+    number          Int
+    float1          Float
+    //double1         Double
+    decimal1        Decimal
+    json1           Json    
+    bytes1          Bytes
+    enum1           TestEnum1     @default(USER)        
+    }
+
+
+//Test tablename mapping
+model TestPrisma2 {
+    id                  Int         @id @default(autoincrement())
+    text1               String      @db.VarChar(255)
+    @@map("test_prisma2")
+    }
+
+
+//Notice that it is enum and not model 
+enum TestEnum1 {
+    USER
+    ADMIN
+    }
+
+
+model TestPlaylist {
+    id        Int     @id @default(autoincrement())
+    title     String  @unique
+    image     String?
+    uri       String
+}
+
+
+//Actually maps to sampleuser table
+model TestUser {
+    id          Int     @id @default(autoincrement())
+    email       String  @unique
+    name        String?
+    posts       TestPost[]
+}
+
+model TestPost {
+    id          Int      @id @default(autoincrement())
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+    title       String
+    content     String?
+    published   Boolean  @default(false)
+    viewCount   Int      @default(0)
+    
+    author      TestUser?    @relation(fields: [authorId], references: [id])
+    authorId    Int?
+}
+

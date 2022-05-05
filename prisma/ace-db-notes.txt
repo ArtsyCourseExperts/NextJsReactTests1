@@ -1,0 +1,159 @@
+
+
+
+See ACES_SaasTechPlan.txt for prisma commands
+
+I use XAMPP for local Maria DB & PhpMyAdmin.
+Maria DB is a MySql open format.  
+Remember MySQL is now part of Oracle, and may change in the future.
+
+Prisma is an ORM that provides Record based objects that support DB commands like update, insert, fetch recordset.
+
+I also use HeidiSQL on Windows to view tables, records, etc.
+
+Prisma also has a DB browser called studio.
+    - npx prisma studio         //Run it.
+    - Runs it at http://localhost:5555/
+
+===================
+
+Production Database is AWS RDS.
+Currently 1 DB has dev/test & prod.
+In the future, I may utilize a separate Server for both.
+
+DO NOT PUT THE SERVER USERNAME & PASSWORD INFO IN THIS FILE.
+
+Local database name dev        ace_tools_dev
+AWS database name dev          ace_tools_dev
+AWS database name prod         ace_tools_prod
+
+===================
+
+    - WAMP
+        - has mysql
+        - Weird isntaller wont let me customize it.
+
+    - XAMPP
+        - has MySql db.
+        - Has PHP and phpMyAdmin as options.
+        - Requires Apache.
+
+    - MariaDB - opensource branch.
+
+    - MySql - now owned by Oracle...
+        - Default port 3306 on dev.
+        - user name =root
+        - user name =ace_saas           pw=LevSaas1249
+            - Global privileges = ALL PRIVILEGES
+            - Host = %
+
+    - XAMPP Control Panel.
+        - 
+
+    - http://localhost/phpmyadmin/
+        - Requires apache to be running.
+
+
+===================
+
+Prisma tips
+
+
+    - Next JS MySQL options
+        - Prisma
+            - "@prisma/client"
+            - www.prisma.io
+            - Object oriented records instead of SQL
+            - Can max out connection count in serverless like AWS Lambda.
+            - works with Next JS and Express/Node servers.
+
+            - Dev dependencies
+                - Setup local prisma studio web server
+                - npm install prisma --save-dev         //Only for dev
+                - npx prisma studio         //Run it.
+                - Runs it at http://localhost:5555/
+                - Works with normal package.json
+
+            - app Dependencies @prisma/client
+                - npm install @prisma/client --save
+
+            
+            - Create Schema files and push to database
+                - npx prisma db push
+                - Pushes your schema file to the database
+                - Creates the DB if it does not exist.
+                - Creates tables if required.
+                - Updates table column structures as they change.
+                - NOTE this tries to delete other tables that are not in schema.
+                - Ignore warnings = 
+                    - N = No, do not igore, cancel
+                    - Y = Yes ignore, delete old tables not in schema
+
+                - Does not modify records in old tables
+
+                - Does not use any Migrations files or history.
+                - NOT RECOMMENDED FOR PRODUCTION.
+                - You do not need to call prisma generate after this.
+
+
+            - Generate artifacts for the client
+                - npx prisma generate
+                - allows you to use import @prisma/client
+                - processes prisma\schema.prisma and VALIDATES all schema
+                - Use this first after changing the schema.
+                - Does NOT upload to Database.
+                    - Does not create/delete tables
+                    - Does not modify columns of tables
+                - Does NOT change schema.prisma file.
+                - changes .\node_modules\~prisma\client
+                    - but I couldn't find where...
+                - At end says, you can now start using Prisma Client in your code...
+
+
+            
+            - Create & Push to DB schema, create Client artifacts
+                - npx prisma migrate dev
+                - pushes new schema stuff to database
+                - command should not be used in production.
+                - Also seeds your database.
+        
+            - Create seed data in DB
+                - npx prisma db seed
+                - May require npm install ts-node -D
+
+                - NOT WORKING YET...  maybe TS-Node
+
+                
+
+            - Update schema (files) from database.
+
+                - prisma db pull
+                - looks at DB and updates your models.  Called Introspection
+                - This will update your Prisma.Schema
+
+
+        - Serverless-mysql
+            - Used by vercel demos
+            + quill
+            + axios?
+            https://github.com/vercel/next.js/tree/canary/examples/with-mysql
+
+            https://javascript.plainenglish.io/connect-mysql-and-authentication-on-next-js-761d12340e4f
+
+
+        - Sequelize
+            - ORM, but not the full thing like Prisma.
+            - 
+
+        - Apollo/GraphQL
+            - 
+
+        - TypeORM
+            - 
+
+
+        - Supabase
+            - https://supabase.com/docs/guides/with-nextjs
+            - Postgress
+            - https://app.supabase.io/
+
