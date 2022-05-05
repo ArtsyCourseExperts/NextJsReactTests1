@@ -1,0 +1,192 @@
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
+2022-01-23 19:59:10 error: unhandledRejection: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:47168:9)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31056:12
+    at eval (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:12:1)
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28479:17)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:35:47)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\build\webpack\plugins\pages-manifest-plugin.js:47:22
+    at fn (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:28477:10)
+    at Hook.eval [as callAsync] (eval at create (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141512:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:141314:14)
+    at cont (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31053:34)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\webpack\bundle5.js:31101:10
+    at symbolIterator (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14452)
+    at done (C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:14832)
+    at C:\AC_AngelTechVentures\Projects\ArtsyCourseExperts\Tech\Saas\github-data\node_modules\next\dist\compiled\neo-async\async.js:1:9438
