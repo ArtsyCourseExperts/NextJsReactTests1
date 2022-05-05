@@ -1,0 +1,16 @@
+/* partial files use _ prefix */
+
+/* To use this file do 
+
+@import "mixins";
+
+*/
+
+@mixin desktop() 
+    {
+    @media (max-width: 600px) 
+        {
+        @content;
+        }
+    }
+

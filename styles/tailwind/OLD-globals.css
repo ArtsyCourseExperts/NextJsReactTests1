@@ -1,0 +1,13 @@
+
+/*
+./styles/globals.css file.
+
+*/
+
+
+
+/* For tailwind CSS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

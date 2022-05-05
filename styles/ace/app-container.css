@@ -1,0 +1,72 @@
+
+/* Container for all pages, like body */
+
+
+.app_body_container 
+    {
+    margin:0px;
+    padding-top:0px;
+    }
+
+
+.app-parent-container 
+    {
+    margin:0px;
+    
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
+
+    border-color: red;
+    border-style:solid;
+    border-left:1px;
+    border-right:1px;
+    border-bottom: 0px;
+    border-top:0px;
+
+    background-color:#ffffff;
+
+    display: "flex";
+    flexDirection: "column";
+    height: "100%";
+    width: "100%";
+  }
+
+.app-content-container
+    {
+    padding:0px;
+    /*padding-bottom:0px;*/
+
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:20px;
+    margin-right:20px;
+
+    border-top:1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: #AAAAAA;
+    border-style: solid;
+
+    background-color:lightgray;
+    }
+
+
+/* For the main area of the page */
+/* Also used when the screen has a nav bar and the main view has padding */
+.normal-body-padding
+    {
+    padding:10px;
+    
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    margin-right:0px;
+   }
+
+.menu-body-panel
+   {
+    display: flex;
+   }

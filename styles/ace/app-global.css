@@ -1,0 +1,41 @@
+
+
+
+.standard-nounderlined-link
+, a.standard-nounderlined-link.link
+, a.standard-nounderlined-link.visited
+, a.standard-nounderlined-link.hover
+    {
+    color: blue;
+    text-decoration:none;
+    }
+
+
+.standard-underlined-link
+, a.standard-underlined-link.link
+, a.standard-underlined-link.visited
+, a.standard-underlined-link.hover
+    {
+    color: blue;
+    text-decoration:underline;
+    }
+
+
+
+.description {
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+  
+
+
+/*
+  .legal_link
+  , a.legal_link.link
+  , a.legal_link.visited
+  , a.legal_link.hover
+      {
+      color: blue;
+      text-decoration:underline;
+      }
+*/
