@@ -1,0 +1,7 @@
+
+//https://github.com/Logflare/next-pino-logflare-logging-example/blob/main/.eslintrc
+
+{
+    //"extends": ["next", "next/core-web-vitals"]
+}
+
